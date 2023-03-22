@@ -1,9 +1,12 @@
+const Product = require("../models/Product.model");
+
 const getAllProductsStatic = async (req, res) => {
-  /**
-   * @description throw an error to test error handling middleware package: express-async-errors
-   */
-  throw new Error("testing async error handling");
-  res.status(200).json({ success: true, msg: "show all products static" });
+  const products = await Product.find({
+    featured: true,
+  }).sort("name");
+  res
+    .status(200)
+    .json({ success: true, nbHits: products.length, data: products });
 };
 
 const getAllProducts = async (req, res) => {
