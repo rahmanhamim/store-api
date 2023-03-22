@@ -110,12 +110,7 @@
     "name": "wooden desk",
     "price": 15,
     "company": "ikea"
-  },
-  {
-    "name": "wooden desk",
-    "price": 40,
-    "company": "ikea"
-  },
+  }, 
   {
     "name": "wooden table",
     "price": 23,
